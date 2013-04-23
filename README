@@ -1,0 +1,25 @@
+
+This repository includes small example applications that use rs-485 port of the raspicomm.
+
+- rs485_write
+ An example application that sends a Hello World message over the rs-485 port.
+
+- rs485_read
+ An example application that receives 10 bytes from the rs-485 port and displays them afterwards.
+
+How to use the examples:
+0. use git to clone this repository 
+ 'git clone https://github.com/amescon/rpc-examples.git'
+
+1. build the examples applications with make and run them
+ 1.1 rs485_write
+  'cd ./rs485_write'
+  'make'
+  './rs485_write'
+
+ 1.2 rs485_read
+  'cd rs485_read'
+  'make'
+  './rs485_read'
+
+2. modify the code and play around with it
