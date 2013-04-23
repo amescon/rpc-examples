@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 
   /* open the port */
   printf("opening device %s...", RS485_DEVICE);
-  if ( (fd = open("/dev/ttyRPC0", O_RDWR | O_NOCTTY | O_NDELAY)) < 0 )
+  if ( (fd = open(RS485_DEVICE, O_RDWR | O_NOCTTY | O_NDELAY)) < 0 )
   {
     printf("failed.\n");
     printf("possible causes:\n");
