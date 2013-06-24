@@ -19,7 +19,7 @@ int main(int argc, char** argv)
   int fd, readBytes, i; char readBuffer[READ_BUFFER_SIZE], data;
 
   /* try to open the raspicomm rs-485 port */
-  printf("this sample application writes to the rs-485 port\n");
+  printf("this sample application reads from the rs-485 port\n");
 
   /* open the port */
   printf("opening device %s...", RS485_DEVICE);
