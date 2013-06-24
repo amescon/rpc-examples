@@ -7,6 +7,9 @@ This repository includes small example applications that use rs-485 port of the 
 - rs485_read
  An example application that receives 10 bytes from the rs-485 port and displays them afterwards.
 
+- rs485_poll
+  A more sophisticated version of rs485_read that uses the poll() system call to wait for rs-485 data and keyboard events at the same time without consuming cpu time.
+
 How to use the examples:
 0. use git to clone this repository 
  'git clone https://github.com/amescon/rpc-examples.git'
@@ -21,5 +24,10 @@ How to use the examples:
   'cd rs485_read'
   'make'
   './rs485_read'
+
+ 1.3 rs485_poll
+  'cd rs485_poll'
+  'make'
+  './rs485_poll'
 
 2. modify the code and play around with it
