@@ -12,7 +12,8 @@ Here is how to use it:
     Receives 10 bytes from the RS-485 port and displays them afterwards.
   - rs485_poll
     A more sophisticated version of rs485_read that uses the poll() system call
-    to wait for RS-485 data and keyboard events at the same time without consuming cpu time.
+    to wait for RS-485 data and keyboard events at the same time without consuming
+    cpu time.
 
 - Change to the directory of the application that you want to run, e.g.:
   cd rpc-examples/rs485_write
