@@ -1,4 +1,6 @@
-This repository includes small example applications that use the RS-485 port of the Raspicomm. Here is how to use it:
+This repository includes small example applications that use the RS-485 port of the Raspicomm. 
+
+Here is how to use it:
 
 - Use GIT to clone this repository to your Raspberry Pi:
   git clone https://github.com/amescon/rpc-examples.git
@@ -9,7 +11,8 @@ This repository includes small example applications that use the RS-485 port of 
   - rs485_read
     Receives 10 bytes from the RS-485 port and displays them afterwards.
   - rs485_poll
-    A more sophisticated version of rs485_read that uses the poll() system call to wait for RS-485 data and keyboard events at the same time without consuming cpu time.
+    A more sophisticated version of rs485_read that uses the poll() system call
+    to wait for RS-485 data and keyboard events at the same time without consuming cpu time.
 
 - Change to the directory of the application that you want to run, e.g.:
   cd rpc-examples/rs485_write
