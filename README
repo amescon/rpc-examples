@@ -1,33 +1,23 @@
+This repository includes small example applications that use the RS-485 port of the Raspicomm. Here is how to use it:
 
-This repository includes small example applications that use rs-485 port of the raspicomm.
+- Use GIT to clone this repository to your Raspberry Pi:
+  git clone https://github.com/amescon/rpc-examples.git
 
-- rs485_write
- An example application that sends a Hello World message over the rs-485 port.
+- The repository includes the following sample apps:
+  - rs485_write
+    Sends "Hello World" over the RS-485 port.
+  - rs485_read
+    Receives 10 bytes from the RS-485 port and displays them afterwards.
+  - rs485_poll
+    A more sophisticated version of rs485_read that uses the poll() system call to wait for RS-485 data and keyboard events at the same time without consuming cpu time.
 
-- rs485_read
- An example application that receives 10 bytes from the rs-485 port and displays them afterwards.
+- Change to the directory of the application that you want to run, e.g.:
+  cd rpc-examples/rs485_write
 
-- rs485_poll
-  A more sophisticated version of rs485_read that uses the poll() system call to wait for rs-485 data and keyboard events at the same time without consuming cpu time.
+- Compile the code into an executable:
+  make
 
-How to use the examples:
-0. use git to clone this repository 
- 'git clone https://github.com/amescon/rpc-examples.git'
+- Run it, e.g.:
+  ./rs485_write
 
-1. build the examples applications with make and run them
- 1.1 rs485_write
-  'cd ./rs485_write'
-  'make'
-  './rs485_write'
-
- 1.2 rs485_read
-  'cd rs485_read'
-  'make'
-  './rs485_read'
-
- 1.3 rs485_poll
-  'cd rs485_poll'
-  'make'
-  './rs485_poll'
-
-2. modify the code and play around with it
+- Time to have some fun! Modify the code, compile it once more and test your changes!
