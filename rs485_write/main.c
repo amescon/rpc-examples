@@ -17,6 +17,7 @@ int set_interface_attribs(int fd, int speed, int parity);
 int main(int argc, char** argv)
 {
   int fd;
+  int written_bytes;
 
   /* try to open the raspicomm rs-485 port */
   printf("this sample application writes to the rs-485 port\n");
@@ -42,7 +43,9 @@ int main(int argc, char** argv)
 
   /* example write */  
   printf("writing the message: (%i) %s to the rs-485 port\n", sizeof(MESSAGE_TO_SEND), MESSAGE_TO_SEND);
-  write(fd, MESSAGE_TO_SEND, sizeof(MESSAGE_TO_SEND));
+  written_bytes = write(fd, MESSAGE_TO_SEND, sizeof(MESSAGE_TO_SEND));
+
+  printf("bytes written: %i\n", written_bytes);
 
   /* close the device again */
   printf("closing the device again\n");
